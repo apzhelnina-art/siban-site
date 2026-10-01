@@ -205,3 +205,17 @@ img,svg{display:block}
   .stage__cap{display:flex;left:32px;right:32px;bottom:32px;max-width:none}
 }
 section[id]{scroll-margin-top:calc(var(--top-h,88px) + 16px)}
+/* шапка: меню по центру между логотипом и кнопками */
+@media (min-width:861px){
+  .top{display:grid;grid-template-columns:auto 1fr auto auto;column-gap:16px}
+  .nav{justify-self:center;margin:0 24px}
+  .lang{margin:0}
+}
+@media (min-width:861px) and (max-width:1240px){
+  .nav{gap:clamp(14px,2vw,28px)!important;margin:0 16px}
+  .nav a{font-size:14px}
+}
+@media (min-width:861px) and (max-width:1100px){
+  .top{grid-template-columns:auto 1fr auto}
+  .top .desk{display:none}
+}
