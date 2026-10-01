@@ -17,7 +17,7 @@ img,svg{display:block}
 .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px var(--pad);background:rgba(14,17,22,.82);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
 .top.scrolled{border-bottom-color:var(--line)}
 .brand{display:flex;align-items:center;gap:12px}
-.brand .mk{width:46px;height:auto}
+.brand .mk{width:46px;height:46px}
 .wm{height:22px;width:auto}
 .nav{display:flex;gap:32px}
 .nav a{color:var(--sub);font-size:15px;transition:color .2s}
@@ -108,7 +108,7 @@ img,svg{display:block}
 .foot{border-top:1px solid var(--line);padding:48px var(--pad) 32px;color:var(--sub);font-size:14px}
 .foot__cols{display:grid;grid-template-columns:1.2fr 1fr 1.3fr 1fr;gap:32px}
 .foot__brand{display:flex;align-items:center;gap:12px}
-.foot__brand .mk{width:40px;height:auto}
+.foot__brand .mk{width:40px;height:40px}
 .foot p{margin:0}
 .foot a:hover{color:var(--ink)}
 .foot__bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}
@@ -173,6 +173,6 @@ img,svg{display:block}
   .list li::before{top:24px;width:10px;height:10px}
   .request{border-radius:20px}
   .wm{height:18px}
-  .brand .mk{width:40px}
+  .brand .mk{width:40px;height:40px}
   .pill--cyan,.pill--ghost{width:100%}
 }
