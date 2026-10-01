@@ -1,5 +1,6 @@
 (function(){
   var top=document.querySelector('.top'),b=document.querySelector('.burger'),nav=document.getElementById('nav');
+  function setH(){document.documentElement.style.setProperty('--top-h',top.offsetHeight+'px')}setH();window.addEventListener('resize',setH);
   function onScroll(){top.classList.toggle('scrolled',window.scrollY>10)}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   if(b){b.addEventListener('click',function(){var o=nav.classList.toggle('open');b.setAttribute('aria-expanded',o);var en=document.documentElement.lang==='en';b.setAttribute('aria-label',o?(en?'Close menu':'Закрыть меню'):(en?'Open menu':'Открыть меню'))});

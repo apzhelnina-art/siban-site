@@ -191,3 +191,17 @@ img,svg{display:block}
 .note{max-width:62ch;font-size:15px;line-height:1.6;border-left:2px solid var(--cyan);padding-left:16px}
 .caps + .chips + .note{margin-top:24px}
 @media (max-width:640px){.spec{grid-template-columns:1fr}.spec dt{border-bottom:0;padding:16px 0 4px}.spec dd{padding:0 0 16px;font-size:16px}}
+/* каждый блок главной — свой экран (ПК и планшет) */
+.nav a{white-space:nowrap}
+@media (min-width:768px){
+  .hero:not(.hero--inner){min-height:calc(100svh - var(--top-h,88px));justify-content:center;padding-top:clamp(32px,5vh,72px);padding-bottom:clamp(40px,7vh,96px)}
+  .stage{height:clamp(420px,calc(100svh - var(--top-h,88px) - 64px),860px);margin-bottom:clamp(24px,4vh,48px)}
+  .stage__mark{width:clamp(280px,min(34vw,56svh),540px)}
+}
+@media (min-width:768px) and (max-width:1100px) and (orientation:portrait){
+  .hero:not(.hero--inner) .h1{font-size:clamp(44px,7.6vw,72px)}
+  .hero:not(.hero--inner) .lead{font-size:19px}
+  .stage__mark{width:min(64vw,560px)}
+  .stage__cap{display:flex;left:32px;right:32px;bottom:32px;max-width:none}
+}
+section[id]{scroll-margin-top:calc(var(--top-h,88px) + 16px)}
