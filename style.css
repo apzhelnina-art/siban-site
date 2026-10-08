@@ -371,3 +371,4 @@ body.drw-lock{overflow:hidden}
 .drw__x span{position:absolute;width:18px;height:2px;background:var(--bg);border-radius:2px;transform:rotate(45deg)}
 .drw__x span+span{transform:rotate(-45deg)}
 .drw__x{position:absolute}
+@media (max-width:600px){.bt__ill--lg g text{font-size:20px}.bt__ill--lg g+g text{font-size:22px}}
