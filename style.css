@@ -1,3 +1,10 @@
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:400;font-display:swap;src:url(Unbounded-400.woff) format('woff')}
+@font-face{font-family:'Unbounded';font-style:normal;font-weight:500;font-display:swap;src:url(Unbounded-500.woff) format('woff')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(Manrope-400.woff) format('woff')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(Manrope-500.woff) format('woff')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(Manrope-700.woff) format('woff')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:800;font-display:swap;src:url(Manrope-800.woff) format('woff')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(JetBrainsMono-400.woff) format('woff')}
 :root{
   --bg:#0E1116; --panel:#151A22; --line:#232A35; --line2:#3A4454;
   --ink:#F2F4F7; --sub:#8B95A5; --cyan:#00B4D8; --glow:#1F3A6B;
@@ -417,3 +424,7 @@ body.drw-lock{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.dh__ill *{animation:none!important}}
 .dh__art--wide{aspect-ratio:1.6;padding:4%}
 @media (max-width:600px){.dh__art--wide{min-height:0;aspect-ratio:1.5;padding:10px}}
+.dc h3,.dh__h{overflow-wrap:break-word;hyphens:auto}
+@media (max-width:400px){.dh__h{font-size:30px}}
+@media (max-width:360px){.dgrid,.dgrid--2{grid-template-columns:1fr}.dc--m2{grid-column:auto}.top{gap:10px;padding-left:16px;padding-right:16px}.dh__h{font-size:27px}}
+@media (max-width:400px){.card .big{font-size:22px;overflow-wrap:anywhere}}
