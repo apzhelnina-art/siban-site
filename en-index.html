@@ -36,7 +36,7 @@
 </section>
 <section class="sec" id="services"><h2 class="h2">Services</h2>
 <div class="bento">
-  <a class="bt bt--big" href="en-components.html"><span class="bt__go">Learn more</span><h3>Electronic components and ICs</h3><p>We kit your BOM — from a single line item to a complete set for your product, including scarce and end-of-life parts.</p>
+  <a class="bt bt--big" href="en-components.html"><h3>Electronic components and ICs</h3><p>We kit your BOM — from a single line item to a complete set for your product, including scarce and end-of-life parts.</p>
     <div class="bom"><div class="bom__h"><span>BOM · 5 lines</span><span>status</span></div><ul><li class="br"><span class="pn">STM32F407VGT6</span><span class="stt is-wait" data-final="Found" data-cls="ok">Searching…</span></li><li class="br"><span class="pn">TPS54331DR</span><span class="stt is-wait" data-final="Alternative" data-cls="an">Searching…</span></li><li class="br"><span class="pn">LM2596S-5.0</span><span class="stt is-wait" data-final="Found" data-cls="ok">Searching…</span></li><li class="br"><span class="pn">ADM3485EARZ</span><span class="stt is-wait" data-final="On order" data-cls="wait">Searching…</span></li><li class="br"><span class="pn">GRM188R71H104K</span><span class="stt is-wait" data-final="Found" data-cls="ok">Searching…</span></li></ul></div></a>
   <a class="bt bt--an" href="en-alternatives.html"><h3>Alternative parts</h3><p>Replacements for end-of-life parts</p><svg viewBox="0 0 260 120" class="bt__ill" aria-hidden="true"><g fill="none" stroke="#3A4454" stroke-width="2"><rect x="20" y="30" width="70" height="60" rx="4"/><rect x="170" y="30" width="70" height="60" rx="4" stroke="#00B4D8"/>
 <path d="M30,30 V20 M45,30 V20 M60,30 V20 M75,30 V20 M30,90 V100 M45,90 V100 M60,90 V100 M75,90 V100"/><path d="M180,30 V20 M195,30 V20 M210,30 V20 M225,30 V20 M180,90 V100 M195,90 V100 M210,90 V100 M225,90 V100" stroke="#00B4D8"/></g>
@@ -72,7 +72,7 @@
     <label>E-mail or phone<input type="text" name="contact" required></label>
     <label>Comment<textarea name="message" rows="3"></textarea></label>
     <label class="file">Attach a file: BOM, Gerber, docs, brief<input type="file" name="bom" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx,.zip,.rar,.7z"></label>
-    <label class="check"><input type="checkbox" name="consent" required> I agree to the <a href="en-privacy.html">privacy policy</a></label>
+    <label class="check"><input type="checkbox" name="consent" required> <span>I agree to the <a href="en-privacy.html">privacy policy</a></span></label>
     <button class="pill pill--dark" type="submit">Send request</button>
   </form>
 </section>
@@ -86,6 +86,24 @@
   </div>
   <div class="foot__bottom"><span>© 2026 SIBAN LLC</span><a href="en-privacy.html">Privacy policy</a></div>
 </footer>
+<div class="drw" id="drw" hidden>
+  <div class="drw__bg" data-close></div>
+  <div class="drw__panel" role="dialog" aria-modal="true" aria-labelledby="drw-t">
+    <button class="drw__x" type="button" data-close aria-label="Close"><span></span><span></span></button>
+    <h2 class="drw__t" id="drw-t">Send a request</h2>
+    <p class="drw__s">Attach a BOM, specification, Gerber files, design documentation or a brief — we will prepare an offer: price, lead time and terms.</p>
+    <form class="form drw__form" action="send.php" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="lang" value="en">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+      <label>Company<input type="text" name="company" required></label>
+      <label>E-mail or phone<input type="text" name="contact" required></label>
+      <label>Comment<textarea name="message" rows="3"></textarea></label>
+      <label class="file">Attach a file: BOM, Gerber, docs, brief<input type="file" name="bom" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx,.zip,.rar,.7z"></label>
+      <label class="check"><input type="checkbox" name="consent" required> <span>I agree to the <a href="en-privacy.html">privacy policy</a></span></label>
+      <button class="pill pill--dark" type="submit">Send request</button>
+    </form>
+  </div>
+</div>
 <script src="site.js"></script>
 </body>
 </html>

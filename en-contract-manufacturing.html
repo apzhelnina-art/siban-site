@@ -36,22 +36,7 @@
 </section>
 <section class="sec"><p class="note">For each project we select a manufacturing facility based on technology, volume, lead time and order economics.</p></section>
 <section class="sec"><div class="chips"><a class="chip" href="en-components.html">Electronic components and ICs</a><a class="chip" href="en-alternatives.html">Alternative parts</a><a class="chip" href="en-pcb.html">PCB and PCBA</a><a class="chip" href="en-equipment.html">Equipment and spare parts</a><a class="chip" href="en-import-logistics.html">Import and logistics</a></div></section>
-<section class="request" id="request">
-  <div class="request__text">
-    <h2 class="h2 h2--dark">Send a request</h2>
-    <p>Attach a BOM, specification, Gerber files, design documentation or a technical brief. We will prepare an offer: price, lead time and terms of supply or production.</p>
-  </div>
-  <form class="form" action="send.php" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="lang" value="en">
-    <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-    <label>Company<input type="text" name="company" required></label>
-    <label>E-mail or phone<input type="text" name="contact" required></label>
-    <label>Comment<textarea name="message" rows="3"></textarea></label>
-    <label class="file">Attach a file: BOM, Gerber, docs, brief<input type="file" name="bom" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx,.zip,.rar,.7z"></label>
-    <label class="check"><input type="checkbox" name="consent" required> I agree to the <a href="en-privacy.html">privacy policy</a></label>
-    <button class="pill pill--dark" type="submit">Send request</button>
-  </form>
-</section>
+<section class="cta"><p class="cta__t">Have a task? Send us a BOM or Gerber files — we will quote price and lead time.</p><a class="pill pill--cyan" href="en-index.html#request">Send request</a></section>
 </main>
 <footer class="foot">
   <div class="foot__cols">
@@ -62,6 +47,24 @@
   </div>
   <div class="foot__bottom"><span>© 2026 SIBAN LLC</span><a href="en-privacy.html">Privacy policy</a></div>
 </footer>
+<div class="drw" id="drw" hidden>
+  <div class="drw__bg" data-close></div>
+  <div class="drw__panel" role="dialog" aria-modal="true" aria-labelledby="drw-t">
+    <button class="drw__x" type="button" data-close aria-label="Close"><span></span><span></span></button>
+    <h2 class="drw__t" id="drw-t">Send a request</h2>
+    <p class="drw__s">Attach a BOM, specification, Gerber files, design documentation or a brief — we will prepare an offer: price, lead time and terms.</p>
+    <form class="form drw__form" action="send.php" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="lang" value="en">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+      <label>Company<input type="text" name="company" required></label>
+      <label>E-mail or phone<input type="text" name="contact" required></label>
+      <label>Comment<textarea name="message" rows="3"></textarea></label>
+      <label class="file">Attach a file: BOM, Gerber, docs, brief<input type="file" name="bom" accept=".xlsx,.xls,.csv,.pdf,.doc,.docx,.zip,.rar,.7z"></label>
+      <label class="check"><input type="checkbox" name="consent" required> <span>I agree to the <a href="en-privacy.html">privacy policy</a></span></label>
+      <button class="pill pill--dark" type="submit">Send request</button>
+    </form>
+  </div>
+</div>
 <script src="site.js"></script>
 </body>
 </html>

@@ -70,3 +70,26 @@
   onSee(bom,function(){var s=bom.querySelectorAll('.stt');s.forEach(function(x,i){setTimeout(function(){x.textContent=x.getAttribute('data-final');x.className='stt '+x.getAttribute('data-cls')},reduce?0:400+i*420)})});
   var pl=document.querySelector('.pl'); onSee(pl,function(){pl.classList.add('is-on')});
 })();
+/* v3: форма-шторка */
+(function(){
+  var d=document.getElementById('drw'); if(!d) return;
+  var last=null, reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function open(e){
+    if(e) e.preventDefault(); last=document.activeElement;
+    var nav=document.getElementById('nav'); if(nav&&nav.classList.contains('open')){var b=document.querySelector('.burger'); if(b) b.click();}
+    d.hidden=false; document.body.classList.add('drw-lock');
+    requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add('is-open')})});
+    setTimeout(function(){var f=d.querySelector('input[name=company]'); if(f) f.focus({preventScroll:true})}, reduce?0:400);
+  }
+  function close(){
+    d.classList.remove('is-open'); document.body.classList.remove('drw-lock');
+    setTimeout(function(){d.hidden=true}, reduce?0:380);
+    if(last&&last.focus) last.focus({preventScroll:true});
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href$="#request"]'); if(a){open(e);return}
+    if(e.target.closest('[data-close]')) close();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!d.hidden) close()});
+  if(location.hash==='#request'&&!document.getElementById('request')) open();
+})();
